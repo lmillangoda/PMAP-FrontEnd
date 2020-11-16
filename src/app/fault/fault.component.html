@@ -1,0 +1,176 @@
+<div class="main-content">
+    <div class="container-fluid">  
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title"><i class="material-icons icon-text mr-2">table_rows</i>Current Fault Readings Table</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-pane active" id="profile">
+                            <div class="col-md-12">
+                                <div class="card card-chart">
+                                    <div class="card-header">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead class=" text-primary">
+                                                    <th>
+                                                        No
+                                                    </th>
+                                                    <th>
+                                                        Current Value
+                                                    </th>
+                                                    <th>
+                                                        Fault At
+                                                    </th>
+                                                </thead>
+                                                <tbody >
+                                                    <tr *ngFor="let element of currentReadsObs | async;let i = index">
+                                                        <td>
+                                                            {{(i + 1) + (currentPaginator.pageIndex * currentPaginator.pageSize)}}
+                                                        </td>
+                                                        <td>
+                                                            {{element.current}}
+                                                        </td>
+                                                        <td>
+                                                            {{element.faultAt}}
+                                                        </td>
+
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <mat-paginator #currentPaginator [pageSize]="15"
+                                        [pageSizeOptions]="[3, 5, 10, 15, 20]"></mat-paginator>
+                                          
+                                    </div>
+                                    <div class="card-footer">
+    
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title"><i class="material-icons icon-text mr-2">table_rows</i>Voltage Fault Readings Table</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-pane active" id="profile">
+                            <div class="col-md-12">
+                                <div class="card card-chart">
+                                    <div class="card-header">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead class=" text-primary">
+                                                    <th>
+                                                        No
+                                                    </th>
+                                                    <th>
+                                                        Voltage Value
+                                                    </th>
+                                                    <th>
+                                                        Fault At
+                                                    </th>
+                                                </thead>
+                                                <tbody >
+                                                    <tr *ngFor="let element of voltageReadsObs | async;let i = index">
+                                                        <td>
+                                                            {{(i + 1) + (voltagePaginator.pageIndex * voltagePaginator.pageSize)}}
+                                                        </td>
+                                                        <td>
+                                                            {{element.voltage}}
+                                                        </td>
+                                                        <td>
+                                                            {{element.faultAt}}
+                                                        </td>
+
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <mat-paginator #voltagePaginator [pageSize]="15"
+                                        [pageSizeOptions]="[3, 5, 10, 15, 20]"></mat-paginator>
+                                          
+                                    </div>
+                                    <div class="card-footer">
+    
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title"><i class="material-icons icon-text mr-2">table_rows</i>Frequency Fault Readings Table</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-pane active" id="profile">
+                            <div class="col-md-12">
+                                <div class="card card-chart">
+                                    <div class="card-header">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead class=" text-primary">
+                                                    <th>
+                                                        No
+                                                    </th>
+                                                    <th>
+                                                        Frequency Value
+                                                    </th>
+                                                    <th>
+                                                        Fault At
+                                                    </th>
+                                                </thead>
+                                                <tbody >
+                                                    <tr *ngFor="let element of frequencyReadsObs | async;let i = index">
+                                                        <td>
+                                                            {{(i + 1) + (frequencyPaginator.pageIndex * frequencyPaginator.pageSize)}}
+                                                        </td>
+                                                        <td>
+                                                            {{element.frequency}}
+                                                        </td>
+                                                        <td>
+                                                            {{element.faultAt}}
+                                                        </td>
+
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <mat-paginator #frequencyPaginator [pageSize]="15"
+                                        [pageSizeOptions]="[3, 5, 10, 15, 20]"></mat-paginator>
+                                          
+                                    </div>
+                                    <div class="card-footer">
+    
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+    </div>
+  </div>
+  

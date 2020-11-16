@@ -1,0 +1,10 @@
+.back-color {
+    background-color: #d6d4e6cc;
+  }
+
+  .icon-text {
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+    fill: #fff;
+}
